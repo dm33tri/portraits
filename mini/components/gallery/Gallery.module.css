@@ -1,0 +1,9 @@
+.gallery {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--vkui--size_base_padding_vertical--regular) 0 0
+    var(--vkui--size_base_padding_horizontal--regular);
+  width: 100%;
+  box-sizing: border-box;
+}

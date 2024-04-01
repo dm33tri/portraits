@@ -1,0 +1,14 @@
+.skeleton {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 6px;
+  width: fit-content;
+}
+
+.skeleton > div {
+  width: 128px;
+  height: 128px;
+  margin: 4px 6px;
+  border-radius: var(--vkui--size_card_border_radius--regular);
+  background-color: var(--vkui--color_background_secondary);
+}

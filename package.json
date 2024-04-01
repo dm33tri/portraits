@@ -1,0 +1,38 @@
+{
+	"name": "portraits",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "pnpm run /dev:.*/",
+		"dev:queue": "wrangler dev --port 10703 --config queue/wrangler.toml --persist-to ./.wrangler",
+		"dev:pages": "wrangler pages dev --port 10701 --proxy 10702 -- rsbuild dev --port 10702",
+		"build": "rsbuild build",
+		"deploy": "pnpm run /deploy:.*/",
+		"deploy:pages": "pnpm build && wrangler pages deploy dist",
+		"deploy:worker": "wrangler deploy --config queue/wrangler.toml",
+		"lint": "pnpm run /lint:.*/",
+		"lint:biome": "biome check --apply .",
+		"lint:typescript": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@vkontakte/icons": "^2.104.0",
+		"@vkontakte/vk-bridge": "^2.14.1",
+		"@vkontakte/vkui": "^6.0.1",
+		"cookie": "^0.6.0",
+		"jose": "^5.2.3",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.6.1",
+		"@cloudflare/workers-types": "^4.20240320.1",
+		"@rsbuild/core": "^0.5.2",
+		"@rsbuild/plugin-react": "^0.5.2",
+		"@types/react": "^18.2.66",
+		"@types/react-dom": "^18.2.22",
+		"typescript": "^5.2.2",
+		"webpack": "^5.91.0",
+		"wrangler": "^3.37.0"
+	}
+}

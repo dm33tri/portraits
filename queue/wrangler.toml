@@ -1,0 +1,20 @@
+name = "queue"
+main = "index.ts"
+compatibility_date = "2024-03-20"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "portraits"
+database_id = "4a29938a-d1d1-4362-9082-a00072773586"
+
+[[r2_buckets]]
+binding = "R2"
+bucket_name = "portraits"
+
+[[durable_objects.bindings]]
+name = "QUEUE"
+class_name = "Queue"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["Queue"]

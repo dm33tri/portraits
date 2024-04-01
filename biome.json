@@ -1,0 +1,26 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.6.1/schema.json",
+	"vcs": {
+		"clientKind": "git",
+		"useIgnoreFile": true,
+		"enabled": true
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"style": {
+				"noNonNullAssertion": "off"
+			},
+			"correctness": {
+				"useExhaustiveDependencies": "off"
+			},
+			"suspicious": {
+				"noExplicitAny": "off"
+			}
+		}
+	}
+}
